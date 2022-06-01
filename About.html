@@ -1,0 +1,91 @@
+<!Doctype html>
+<html>
+<head>
+	<title>About Me</title>
+	<link rel = "stylesheet" href = "css/About.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+
+	<body>
+		<div class ="wrapper">
+		<header>
+			<div class = "navigation-bar">
+		<div id ="navigation-container">
+			<img src ="images/prog.jfif" class = "logo">
+			<ul>
+				<ul>
+					<li id = "list"><a href="index.html">home</a></li>
+						<li id = "list"><a href="About.html">About me</a></li>
+							<li id ="list"><a href="Contact.html">Contact</a></li>
+						</ul>
+					</ul>
+				</div>
+			
+
+			</div>
+		</header>
+		<div class ="container-box">
+			<img src = "images/myPic.jpg" class ="model">
+			<div class = "About-Text">
+				<h1>About Me</h1>
+				
+				<p id = "text1"></p>
+				<p id ="text2"> </p>
+				<p id = "text3"></p>
+				<p id = "proj"></p>
+				
+				<ol id = "myList"></ol>
+			</div>
+
+		</div>
+
+		
+
+		
+		<footer>
+				
+				
+			<p id ="foot"></p>
+				
+				
+
+			</footer>
+		<script type="text/javascript">
+
+
+var lists = document.getElementById("list");
+for (var i=0; i<lists.length;i++){
+    lists[i].textContent = "";
+    var a = document.createElement("a");
+    a.href ="index.html"+text;
+    a.href ="About.html"+text;
+	a.href="Contact.html"+text;
+    a.textContent = text;
+    lists[i].appendChild(a);
+}
+	
+
+			let AboutME = "Hi! My name is Kevin Mahlauli, Full stack developer";
+			document.getElementById("text1").innerHTML=AboutME;
+			let AboutME2 = " Experience in Back-end(C#.NET, SQL server, PHP, MYSQL and Java) front-end (HTML5, CSS3, JAVASCRIPT) and developing, implementing, designing and programs of the systems. Experience in java application development. Problem solver and writing codes, debugging, testing and creating Rational databases.";
+			document.getElementById("text2").innerHTML=AboutME2;
+
+			let AboutME3 = "Educational background: Certified Amazon web services cloud practitioner, system development,responsive web designer,data visualization,oca java,system support and information technology diploma";
+			document.getElementById("text3").innerHTML=AboutME3; 
+			
+			let para = "@copyright by Kevin Mahlauli codetribe bootcamp 2022";
+			document.getElementById("foot").innerHTML=para;
+
+
+
+
+</script>
+
+
+
+
+	</div>
+
+	</body>
+	
+	</html>

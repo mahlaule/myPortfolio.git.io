@@ -1,0 +1,125 @@
+<!Doctype html>
+<html>
+<head>
+	<title>Contact details</title>
+	<link rel = "stylesheet" href = "css/Contact.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+
+	<body>
+		<div class ="wrapper">
+		<header>
+			<div class = "navigation-bar">
+		<div id ="navigation-container">
+			<img src ="images/prog.jfif" class = "logo">
+			<ul>
+				<li id = "list"><a href="index.html">home</a></li>
+				<li id = "list"><a href="About.html">About me</a></li>
+					<li id ="list"><a href="Contact.html">Contact</a></li>
+					</ul>
+				</div>
+			
+
+			</div>
+		</header>
+		<div class = "contact-us">
+		<div class = "title">
+		<h1>Contact Me</h1>
+		</div>
+		<div class ="form-items">
+		
+	<form name ="myFORM" action="https://formspree.io/f/mlezbarl" onsubmit="return validateForm()"  method="POST">
+
+		<label>
+			
+			<input type = "Name" name="Name" placeholder="enter your name">
+		</label>
+
+		<label>
+			
+			<input type = "Surname" name ="Surname" placeholder=" enter your surname">
+		</label>
+		  
+			<label>
+				
+				<input type="email" name="email" placeholder="enter your email">
+			  </label>
+			  <label>
+				
+				<textarea name="message" placeholder="Message..................."></textarea>
+			  </label>
+			  
+		
+		<button type="submit">Send</button>
+		</form>
+		</div>
+		</div>
+		
+
+
+
+
+
+		<footer>
+				
+			
+				
+				
+				<p id = "text"></p>
+				
+
+			</footer>
+			<script>
+				var lists = document.getElementById("list");
+for (var i=0; i<lists.length;i++){
+    lists[i].textContent = "";
+    var a = document.createElement("a");
+    a.href ="index.html"+text;
+    a.href ="About.html"+text;
+	a.href="Contact.html"+text;
+    a.textContent = text;
+    lists[i].appendChild(a);
+}
+			
+
+
+
+
+
+				let para ="@copyright by Kevin Mahlauli codetribe bootcamp 2022";
+				document.getElementById('text').innerHTML=para;
+				function validateForm(){
+        if(document.myFORM.Name.value == ""){
+            alert("Name is required");
+            document.myFORM.Name.focus();
+            return false;
+        } 
+
+        if(document.myFORM.Surname.value == ""){
+            alert("Surname is required");
+            document.myFORM.Surname.focus();
+            return false;
+        }
+       
+        if(document.myFORM.email.value == ""){
+            alert("Enter valid email address");
+            document.myFORM.email.focus();
+            return false;
+
+        }
+        if(document.myFORM.message.value == ""){
+            alert("message is required");
+            document.myFORM.message.focus();
+            return false;
+        }
+        return( true );
+        
+    }
+			</script>
+			
+		</div>
+
+		</div>
+	
+	</body>
+	</html>
